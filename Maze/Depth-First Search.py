@@ -19,7 +19,7 @@ def GetCanMove():
 
 
 # 深度搜索算法
-def DeepFirstSearch(lastmove):
+def DeepFirstSearch():
 	global task #当前任务状态（是否已经采集宝箱）
 	global visited #保存已经走过的位置
 
@@ -39,7 +39,7 @@ def DeepFirstSearch(lastmove):
 		if i[1] not in visited:
 			#移动并进行下一轮探索
 			move(i[0])
-			till()
+			# till() 可用于观察路径
 			DeepFirstSearch(i[0])
 			if task:
 				return
